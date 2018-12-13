@@ -1,0 +1,53 @@
+---
+title: "rbokeh_ronfle"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+library(rbokeh)
+library(readr)
+ronfle <- read_table2("C:/Users/asus/Desktop/shiny/ronfleAPP/ronfle.txt")
+View(ronfle)
+
+str(ronfle)
+
+
+
+```
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Chart A
+
+```{r}
+figure(width = NULL, height = NULL) %>%
+  ly_points(POIDS ,TAILLE, data = ronfle, color = RONFLE)
+
+
+
+
+```
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Chart B
+
+```{r}
+figure(width = NULL, height = NULL, legend_location = "top_left") %>%
+  ly_quantile(POIDS, group = RONFLE, data = ronfle)
+
+```
+
+### Chart C
+
+```{r}
+figure(width = NULL, height = NULL) %>%
+  ly_points(POIDS, TAILLE, data = ronfle,color =ALCOOL)
+```
+

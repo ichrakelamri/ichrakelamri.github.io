@@ -1,0 +1,46 @@
+name: El Amri Ichrak
+output_dir: '.'
+navbar:
+  title: El Amri Ichrak
+  type: inverse
+  left:
+  - text: Home
+    icon: fa-home
+    href: index.html
+  - text: Projects
+    menu: 
+      - text: Bayesian Statistics
+        href: https://www.kaggle.com/ichrakelamri/nombre-d-etudiants-reguliers-inscrits-en-tunisie
+      - text: Shiny app
+        href: shiny.html
+      - text: rbokehRonfle
+        href: ronfle.html
+     
+  - text: My CV
+    href: CV.pdf
+ 
+  - text: Data
+    menu:
+      - text: Esperance de vie
+        href: https://www.kaggle.com/ichrakelamri/esperance-de-vie-et-immunisation-chez-les-enfants
+      - text: secteur d'activite
+        href: https://www.kaggle.com/ichrakelamri/secteur-dactivit
+      - text: Other Datasets
+        href:  https://www.kaggle.com/datasets?sortBy=updated&group=my&page=1&pageSize=20&size=sizeAll&filetype=fileTypeAll&license=licenseAll
+  right:
+  - icon: fa-envelope fa-lg
+    href: contact.html
+  - icon: fa-github fa-lg
+    href: https://github.com/ichrakelamri
+  - icon: fa-linkedin fa-lg
+    href: https://www.linkedin.com/in/ichrak-el-amri-742322166/
+  - icon: fa-facebook fa-lg
+    href: https://www.facebook.com/ichrak.elamri.50
+output:
+  html_document:
+    theme: yeti
+    highlight: textmate
+    css: styles.css
+    lib_dir: site_libs
+    self_contained: no
+
